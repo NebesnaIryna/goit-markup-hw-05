@@ -19,6 +19,10 @@ body {
   margin: 0;
 }
 
+img {
+  display: block;
+}
+
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -30,10 +34,6 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-}
-
-img {
-  display: block;
 }
 
 /* Header */
@@ -83,53 +83,8 @@ img {
   padding: 32px 0;
 }
 
-.studio {
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--title-text-color);
-  text-decoration: none;
-  transition: color var(--timing-function); 
-}
-
-.studio:hover,
-.studio:focus {
-  color: var(--accent-color);
-}
-
-/* Portfolio */
-.portfolio {
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--title-text-color);
-  text-decoration: none;
-  transition: color var(--timing-function);
-}
-
-.portfolio:hover,
-.portfolio:focus {
-  color: var(--accent-color);
-}
-
-.active{
-  position: relative;
-  padding: 32px 0;
-  color: var(--accent-color);
-}
-
-.active::after{
-  position: absolute;
-  content: '';
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: var(--accent-color);
-  border-radius: 2px;
-  bottom: -1px;
-}
-
-/* Contact */
+.studio,
+.portfolio,
 .contact {
   font-weight: 500;
   line-height: 1.14;
@@ -139,9 +94,30 @@ img {
   transition: color var(--timing-function);
 }
 
+.studio:hover,
+.studio:focus,
+.portfolio:hover,
+.portfolio:focus,
 .contact:hover,
 .contact:focus {
   color: var(--accent-color);
+}
+
+.active {
+  position: relative;
+  padding: 32px 0;
+  color: var(--accent-color);
+}
+
+.active::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  bottom: -2px;
 }
 
 .list-type-none-two {
@@ -154,9 +130,9 @@ img {
 }
 
 /*Mail*/
-.icon-envelope {
+.icon-envelope,
+.icon-smartphone {
   fill: currentColor;
-  cursor: pointer;
   margin-right: 10px;
   vertical-align: middle;
 }
@@ -168,25 +144,17 @@ img {
   color: var(--primary-text-color);
   text-decoration: none;
   transition: color var(--timing-function);
-  transition: fill var(--timing-function);
 }
 
 .mail:hover,
 .mail:focus,
-.tel:hover ,
+.tel:hover,
 .tel:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
 
 /*Telephone number*/
-.icon-smartphone {
-  fill: currentColor;
-  cursor: pointer;
-  margin-right: 10px;
-  vertical-align: middle;
-  
-}
 
 .tel {
   margin-left: 30px;
@@ -220,7 +188,7 @@ img {
   background-position: center;
 }
 
-.block-head {
+.effective-solutions-head {
   position: relative;
 }
 
@@ -253,8 +221,8 @@ img {
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.06em;
-  transition: background-color var(--timing-function);
-  transition: box-shadow var(--timing-function);
+  transition: background-color var(--timing-function),
+    box-shadow var(--timing-function);
 }
 
 .control-button:hover {
@@ -305,10 +273,10 @@ img {
 }
 
 .button-close:hover,
-.button-close:focus
-{
-  fill:var(--accent-color)
+.button-close:focus {
+  fill: var(--accent-color);
 }
+
 /*Features*/
 
 .visually-hidden {
@@ -324,7 +292,7 @@ img {
   margin: -1px;
 }
 
-.list {
+.benefits-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -343,10 +311,7 @@ img {
   padding: 25px 100px;
 }
 
-.atention-to-detail,
-.punctuality,
-.planning,
-.modern-tehnology {
+.benefits-list-title {
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
@@ -355,10 +320,7 @@ img {
   padding-bottom: 10px;
 }
 
-.paragraph-atention-to-detail,
-.paragraph-punctuality,
-.pagargaph-planning,
-.paragraph-modern-tehnology {
+.benefits-list-paragraph {
   line-height: 1.71;
   color: var(--primary-text-color);
   margin: 0;
@@ -390,7 +352,6 @@ img {
 
 .pictures-what-we-do-list {
   position: relative;
-  
 }
 
 .process-writing-code {
@@ -409,7 +370,7 @@ img {
   font-weight: 700;
   line-height: calc(16 / 14);
   text-align: center;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
   text-transform: uppercase;
   color: var(--secondary-color);
@@ -438,7 +399,7 @@ img {
   gap: 30px;
 }
 
-.ihor-demyanenko {
+.list-our-team-information {
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -449,10 +410,7 @@ img {
   padding: 30px 0 0 0;
 }
 
-.title-ihor-demyanenko,
-.title-olga-repina,
-.title-mykola-tarasov,
-.title-mykhailo-yermakov {
+.list-our-team-title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -461,10 +419,7 @@ img {
   margin: 0;
 }
 
-.paragraph-ihor-demyanenko,
-.paragraph-olga-repina,
-.pagragraph-mykola-tarasov,
-.paragraphmykhailo-yermakov {
+.list-our-team-paragraph {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -491,37 +446,19 @@ img {
   transition: background-color var(--timing-function);
 }
 
-.icon-instagram,
-.icon-twitter,
-.icon-facebook,
-.icon-linkedin {
+.icon-social-network {
   fill: var(--icon-color);
   transition: fill var(--timing-function);
 }
 
-.link-icon:hover .icon-instagram,
-.link-icon:hover .icon-twitter,
-.link-icon:hover .icon-facebook,
-.link-icon:hover .icon-linkedin,
-.link-icon:focus .icon-instagram,
-.link-icon:focus .icon-twitter,
-.link-icon:focus .icon-facebook,
-.link-icon:focus .icon-linkedin {
+.link-icon:hover .icon-social-network,
+.link-icon:focus .icon-social-network {
   fill: var(--secondary-color);
 }
 
 .link-icon:hover,
 .link-icon:focus {
   background-color: #2196f3;
-}
-
-.olga-repina,
-.mykola-tarasov,
-.mykhailo-yermakov {
-  background: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
 }
 
 .title-our-client {
@@ -535,64 +472,29 @@ img {
   padding: 0;
 }
 
-.button-icon-yaco,
-.button-icon-company-tagline-here,
-.button-icon-company,
-.button-icon-foster-peters,
-.button-icon-brand,
-.button-icon-company-tag-line {
+.link-our-client {
   display: flex;
   padding: 15px 31px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   background-color: transparent;
-  cursor: pointer;
+  transition: border-color var(--timing-function);
 }
 
-.icon-yaco,
-.icon-company-tagline-here,
-.icon-company,
-.icon-foster-peters,
-.icon-brand,
-.icon-company-tag-line {
+.icon-our-client {
   fill: var(--icon-color);
 }
 
-.button-icon-yaco:hover,
-.button-icon-yaco:hover .icon-yaco,
-.button-icon-company-tagline-here:hover,
-.button-icon-company-tagline-here:hover .icon-company-tagline-here,
-.button-icon-company:hover,
-.button-icon-company:hover .icon-company,
-.button-icon-foster-peters:hover,
-.button-icon-foster-peters:hover .icon-foster-peters,
-.button-icon-brand:hover,
-.button-icon-brand:hover .icon-brand,
-.button-icon-company-tag-line:hover,
-.button-icon-company-tag-line:hover .icon-company-tag-line,
-.button-icon-yaco:focus,
-.button-icon-yaco:focus .icon-yaco,
-.button-icon-company-tagline-here:focus,
-.button-icon-company-tagline-here:focus .icon-company-tagline-here,
-.button-icon-company:focus,
-.button-icon-company:focus .icon-company,
-.button-icon-foster-peters:focus,
-.button-icon-foster-peters:focus .icon-foster-peters,
-.button-icon-brand:focus,
-.button-icon-brand:focus .icon-brand,
-.button-icon-company-tag-line:focus,
-.button-icon-company-tag-line:focus .icon-company-tag-line {
+.link-our-client:hover,
+.link-our-client:hover .icon-our-client,
+.link-our-client:focus,
+.link-our-client:focus .icon-our-client {
   border-color: #2196f3;
   fill: #2196f3;
 }
 
-.button-icon-yaco .icon-yaco,
-.button-icon-company-tagline-here .icon-company-tagline-here,
-.button-icon-company .icon-company,
-.button-icon-foster-peters .icon-foster-peters,
-.button-icon-brand .icon-brand,
-.button-icon-company-tag-line .icon-company-tag-line{
-transition: border-color var(--timing-function), fill var(--timing-function);
+.link-our-client .icon-our-client {
+  transition: fill var(--timing-function);
 }
 
 /*Footer*/
@@ -672,29 +574,22 @@ transition: border-color var(--timing-function), fill var(--timing-function);
   margin-top: 20px;
 }
 
-.link-icon-social-network {
+.link-icon-network {
   padding: 12px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: fill var(--timing-function);
+  transition: background-color var(--timing-function);
 }
 
-.link-icon-social-network:hover .icon-instagram,
-.link-icon-social-network:hover .icon-twitter,
-.link-icon-social-network:hover .icon-facebook,
-.link-icon-social-network:hover .icon-linkedin,
-.link-icon-social-network:focus .icon-instagram,
-.link-icon-social-network:focus .icon-twitter,
-.link-icon-social-network:focus .icon-facebook,
-.link-icon-social-network:focus .icon-linkedin {
+.icon-network {
   fill: var(--secondary-color);
 }
 
-.link-icon-social-network:hover,
-.link-icon-social-network:focus {
+.link-icon-network:hover,
+.link-icon-network:focus {
   background-color: var(--accent-color);
 }
 
@@ -723,17 +618,15 @@ transition: border-color var(--timing-function), fill var(--timing-function);
   line-height: 1.625;
   text-align: center;
   color: var(--title-text-color);
+  cursor: pointer;
   border: 0;
   background: #f5f4fa;
   border-radius: 4px;
-  transition: var(--timing-function);
-  transition: box-shadow var(--timing-function);
+  transition: color var(--timing-function), box-shadow var(--timing-function),
+    background-color var(--timing-function);
 }
 
-.button-web-site,
-.button-applications,
-.button-design,
-.button-marketing {
+.button-filter-list {
   display: inline-block;
   padding: 6px 22px;
   background: #f5f4fa;
@@ -744,24 +637,18 @@ transition: border-color var(--timing-function), fill var(--timing-function);
   line-height: 1.625;
   text-align: center;
   color: var(--title-text-color);
+  cursor: pointer;
   border: 0;
   background: #f5f4fa;
   border-radius: 4px;
-  transition: color var(--timing-function), box-shadow var(--timing-function), background-color var(--timing-function);
-
+  transition: color var(--timing-function), box-shadow var(--timing-function),
+    background-color var(--timing-function);
 }
 
 .button-all:hover,
-.button-web-site:hover,
-.button-applications:hover,
-.button-design:hover,
-.button-marketing:hover,
+.button-filter-list:hover,
 .button-all:focus,
-.button-web-site:focus,
-.button-applications:focus,
-.button-design:focus,
-.button-marketing:focus {
-  cursor: pointer;
+.button-filter-list:focus {
   color: var(--secondary-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -777,19 +664,19 @@ transition: border-color var(--timing-function), fill var(--timing-function);
   gap: 30px;
 }
 
-.project-list-link{
+.project-list-link {
   display: block;
   text-decoration: none;
   transition: box-shadow var(--timing-function);
 }
 
 .project-list-link:hover,
-.project-lisy-link:focus{
+.project-lisy-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.project-list-link:hover .overlay-text{
+.project-list-link:hover .overlay-text {
   transform: translateY(0);
   opacity: 1;
 }
@@ -801,6 +688,7 @@ transition: border-color var(--timing-function), fill var(--timing-function);
 
 .overlay-text {
   position: absolute;
+  margin: 0;
   top: 0;
   left: 0;
   width: 100%;
@@ -822,15 +710,7 @@ transition: border-color var(--timing-function), fill var(--timing-function);
   padding: 20px 24px;
 }
 
-.title-addentum,
-.title-new-orlean-golden-star-poster,
-.title-seafood-restaurant,
-.title-project-prime,
-.title-project-boxes,
-.title-inspiration-has-no-borders,
-.title-limited-edition,
-.title-project-lab,
-.title-growing-business {
+.project-date-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -839,20 +719,10 @@ transition: border-color var(--timing-function), fill var(--timing-function);
   margin: 0;
 }
 
-.paragraph-addentum,
-.paragraph-new-orlean-golden-star-poster,
-.paragraph-seafood-restaurant,
-.paragraph-project-prime,
-.paragraph-project-boxes,
-.paragraph-inspiration-has-no-borders,
-.paragraph-limited-edition,
-.paragraph-project-lab,
-.paragraph-growing-business {
+.project-date-paragraph {
   font-size: 16px;
   line-height: 1.875;
   color: var(--primary-text-color);
   margin: 0;
   padding-top: 4px;
 }
-
-
