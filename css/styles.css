@@ -74,7 +74,6 @@ img {
 
 /* Studio */
 .list-type-none {
-  width: 281px;
   list-style-type: none;
   display: flex;
   gap: 50px;
@@ -82,6 +81,11 @@ img {
   padding: 0;
   margin-left: 93px;
   padding: 32px 0;
+  
+}
+.navigation-list-item a{
+  display: flex;
+  align-items: center;
 }
 
 .studio {
@@ -92,6 +96,18 @@ img {
   text-decoration: none;
   transition: var(--timing-function);
   outline: 1px solid orange;
+}
+.active{
+  color: var(--accent-color);
+}
+
+.active::after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 .studio:hover,
@@ -128,7 +144,6 @@ img {
 .contact:hover,
 .contact:focus {
   color: var(--accent-color);
-  
 }
 
 .list-type-none-two {
@@ -146,7 +161,6 @@ img {
   cursor: pointer;
   margin-right: 10px;
   vertical-align: middle;
-  transition: var(--timing-function);
 }
 
 .mail {
@@ -159,17 +173,12 @@ img {
 }
 
 .mail:hover,
-.mail:hover .icon-envelope,
 .mail:focus,
-.mail:focus .icon-envelope,
-.tel:hover,
-.tel:hover .icon-smartphone,
-.tel:focus .icon-smartphone,
+.tel:hover ,
 .tel:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
-
 
 /*Telephone number*/
 .icon-smartphone {
@@ -177,7 +186,7 @@ img {
   cursor: pointer;
   margin-right: 10px;
   vertical-align: middle;
-  transition: var(--timing-function);
+  
 }
 
 .tel {
@@ -292,6 +301,7 @@ img {
   cursor: pointer;
   top: 8px;
   right: 8px;
+  transition: var(--timing-function);
 }
 
 .button-close:hover,
@@ -380,6 +390,7 @@ img {
 
 .pictures-what-we-do-list {
   position: relative;
+  
 }
 
 .process-writing-code {
@@ -388,6 +399,7 @@ img {
 
 .text-for-picture {
   position: absolute;
+  display: flex;
   width: 100%;
   height: 24%;
   bottom: 0;
@@ -395,8 +407,10 @@ img {
   margin: 0;
   background: rgba(47, 48, 58, 0.8);
   font-weight: 700;
-  line-height: 16px;
+  line-height: calc(16 / 14);
   text-align: center;
+  align-items: center; 
+  justify-content: center;
   text-transform: uppercase;
   color: var(--secondary-color);
 }
@@ -698,24 +712,6 @@ transition: var(--timing-function);
   justify-content: center;
 }
 
-.button-all:hover,
-.button-web-site:hover,
-.button-applications:hover,
-.button-design:hover,
-.button-marketing:hover,
-.button-all:focus,
-.button-web-site:focus,
-.button-applications:focus,
-.button-design:focus,
-.button-marketing:focus {
-  cursor: pointer;
-  color: var(--secondary-color);
-  background: #2196f3;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-}
-
 .button-all {
   display: inline-block;
   padding: 6px 25px;
@@ -755,6 +751,24 @@ transition: var(--timing-function);
   transition: box-shadow var(--timing-function);
 }
 
+.button-all:hover,
+.button-web-site:hover,
+.button-applications:hover,
+.button-design:hover,
+.button-marketing:hover,
+.button-all:focus,
+.button-web-site:focus,
+.button-applications:focus,
+.button-design:focus,
+.button-marketing:focus {
+  cursor: pointer;
+  color: var(--secondary-color);
+  background: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
 .project-list {
   list-style-type: none;
   margin: 0;
@@ -779,17 +793,21 @@ transition: var(--timing-function);
   transition: box-shadow var(--timing-function);
 }
 
-.addentum:hover,
-.new-orlean-golden-star-poster:hover,
-.seafood-restaurant:hover,
-.project-prime:hover,
-.project-boxes:hover,
-.inspiration-has-no-borders:hover,
-.limited-edition:hover,
-.project-lab:hover,
-.growing-business:hover {
+.project-list-link{
+  display: block;
+  text-decoration: none;
+  transition: box-shadow var(--timing-function);
+}
+
+.project-list-link:hover,
+.project-lisy-link:focus{
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.project-list-link:hover .overlay-text{
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .overlay {
@@ -799,50 +817,19 @@ transition: var(--timing-function);
 
 .overlay-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   padding: 63px 24px;
+  background: rgba(33, 150, 243, 0.9);
   font-weight: 400;
   font-size: 18px;
-  line-height: 28px;
-  color: #ffffff;
-  transform: translate(-50%, -50%);
+  line-height: 1.56;
+  color: var(--secondary-color);
+  transform: translateY(100%);
   opacity: 0;
   transition: var(--timing-function);
-}
-
-.overlay:hover .overlay-text {
-  opacity: 1;
-}
-
-.overlay::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(33, 150, 243, 0.9);
-
-  transition: var(--timing-function);
-  transform: translateY(100%);
-  transition: var(--timing-function);
-}
-
-.overlay:hover::before {
-  opacity: 1;
-}
-
-.addentum:hover .overlay::before,
-.new-orlean-golden-star-poster:hover .overlay::before,
-.seafood-restaurant:hover .overlay::before,
-.project-prime:hover .overlay::before,
-.project-boxes:hover .overlay::before,
-.inspiration-has-no-borders:hover .overlay::before,
-.limited-edition:hover .overlay::before,
-.project-lab:hover .overlay::before,
-.growing-business:hover .overlay::before {
-  transform: translateY(0);
 }
 
 .project-date {
@@ -885,35 +872,3 @@ transition: var(--timing-function);
 }
 
 
-
-.studio:active,
-.portfolio:active{
-  color: var(--accent-color);
-}
-
-.navigation-item{
-  position: relative;
-
-}
-
-.studio::after{
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: red;
-}
-
-.portfolio::after{
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: red;
-}
