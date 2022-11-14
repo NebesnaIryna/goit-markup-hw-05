@@ -443,7 +443,7 @@ img {
   border-radius: 50%;
   justify-content: center;
   align-items: center;
-  transition: background-color var(--timing-function);
+  transition: background-color var(--timing-function), fill var(--timing-function);
 }
 
 .icon-social-network {
